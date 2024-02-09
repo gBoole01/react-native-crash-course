@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import { FlatList, Image, Text, TextInput, TouchableOpacity, View } from "react-native"
+import { Pokemon } from "../types"
 
 function SearchBar({navigation}) {
     const [text, setText] = useState("")
-    const [pokemons, setPokemons] = useState([])
-    const [filteredPokemons, setFilteredPokemons] = useState([])
+    const [pokemons, setPokemons] = useState<Pokemon[] | null>([])
+    const [filteredPokemons, setFilteredPokemons] = useState<Pokemon[] | null>([])
     
     useEffect(() => {
         fetch("https://tyradex.vercel.app/api/v1/pokemon")
