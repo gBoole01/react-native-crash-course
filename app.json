@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "mobile-app-crash-course",
-    "slug": "mobile-app-crash-course",
+    "name": "react-native-crash-course",
+    "slug": "react-native-crash-course",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
