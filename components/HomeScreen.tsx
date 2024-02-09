@@ -1,24 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import SearchBar from './SearchBar';
 
-function HomeScreen() {
+function HomeScreen({navigation}) {
   return (
     <View style={styles.container}>
-      <Text>Hello World !</Text>
-      <StatusBar style="auto" />
+      <SearchBar navigation={navigation} />
     </View>
   )
 }
 
-
-
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 24,
+  },
+  paragraph: {
+    margin: 24,
+    marginTop: 0,
+    fontSize: 14,
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  logo: {
+    height: 128,
+    width: 128,
   },
 });
 
