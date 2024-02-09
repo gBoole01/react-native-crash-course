@@ -9,15 +9,11 @@ function SearchBar({navigation}) {
     useEffect(() => {
         fetch("https://tyradex.vercel.app/api/v1/pokemon")
           .then((response) => {
-            if (!response.ok) {
-              console.error("Réponse réseau non OK");
-            }
+            if (!response.ok) console.error("Réponse réseau non OK");
             return response.json(); 
           })
-          .then((json) => {
-              setPokemons(json);
-          })
-          .catch((error) => console.error("Erreur de fetch:", error));
+          .then(json => setPokemons(json))
+          .catch(error => console.error("Erreur de fetch:", error));
       }, []);
     
       useEffect(() => {
